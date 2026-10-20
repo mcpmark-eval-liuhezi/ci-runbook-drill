@@ -1,0 +1,16 @@
+name: hold
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  hold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold for about 30 minutes
+        run: |
+          echo "Simulating a hung CI job..."
+          sleep 1800
+          echo "Done sleeping."
