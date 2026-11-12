@@ -7,13 +7,12 @@ jobs:
   quick-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Quick check markers
-        run: |
-          echo "DRILL-LOG-MARKER-A17"
-          echo "quick job done"
-
+      - name: Log marker A17
+        run: echo "DRILL-LOG-MARKER-A17"
+      - name: Quick job done
+        run: echo "quick job done"
   long-hold:
     runs-on: ubuntu-latest
     steps:
-      - name: Hold for a while
+      - name: Hold for 30 minutes
         run: sleep 1800
